@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математичний тест</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f9f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #test {
+            background-color: #f0f5f5;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            width: 450px;
+        }
+        header {
+            background-color: #66b2ff;
+            color: #fff;
+            padding: 20px;
+            border-radius: 16px 16px 0 0;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        label {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #555;
+        }
+        select {
+            width: calc(100% - 40px);
+            padding: 20px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            font-size: 20px;
+            border: 2px solid #99cc99;
+            border-radius: 8px;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 25px;
+            font-size: 22px;
+            border: none;
+            border-radius: 8px;
+            background-color: #66b2ff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #4d94ff;
+        }
+        p {
+            margin: 20px 0;
+            font-size: 20px;
+            color: #777;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+        .back {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back:hover {
+    background-color: #2980b9;
+}
+a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="test">
+        <a class="back" href="../index.html">На головну</a>
+        <header>
+    
+            <h1>Математичний тест</h1>
+        </header>
+        <label for="answer">Знайдіть число х, якщо 47% від цього числа = 59</label>
+        <select id="answer">
+            <option value="120.212">120.212</option>
+            <option value="125.532">125.532</option>
+            <option value="130.555">130.555</option>
+            <option value="135.789">135.789</option>
+        </select>
+
+        <button onclick="checkAnswer()">Перевірити</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const selectedAnswer = document.getElementById('answer').value;
+            const resultElement = document.getElementById('result');
+
+            if (parseFloat(selectedAnswer) === 125.532) {
+                resultElement.innerText = 'Вірно!';
+                resultElement.className = 'correct';
+            } else {
+                resultElement.innerText = 'Неправильно.Спробуйте ще раз.';
+                resultElement.className = 'incorrect';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ефект фінансового левериджу</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="back" href="../index.html">На головну</a>
+    <header>
+    <h1>Ефект фінансового левериджу</h1>
+    <a class="up" href="index.html">Головна</a>
+    <a class="up" href="index1.html">Що таке ЕФЛ</a>
+    <a class="up" href="index2.html">Калькулятор</a>
+    <a class="up" href="index3.html">Перевірка знань</a>
+    <a class="up" href="index4.html">Про автора</a>
+  </header>
+
+  <div class="calc">
+    <h1>Калькулятор ЕФЛ</h1>
+    <label for="t">Ефективна ставка податку на прибуток:</label>
+    <input type="number" id="t" min="0" placeholder="Введіть значення">
+    <label for="roa">Рентабельність активів:</label>
+    <input type="number" id="roa" min="0" placeholder="Введіть значення">
+    <label for="cd">Ставка за кредит:</label>
+    <input type="number" id="cd" min="0" placeholder="Введіть значення">
+    <label for="pk">Позиковий капітал:</label>
+    <input type="number" id="pk" min="0" placeholder="Введіть значення">
+    <label for="vk">Власний Капітал:</label>
+    <input type="number" id="vk" min="0" placeholder="Введіть значення">
+    <button onclick="calculate()">Розрахувати</button>
+    <div class="result" id="Result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      const t = parseFloat(document.getElementById('t').value);
+      const roa = parseFloat(document.getElementById('roa').value);
+      const cd = parseFloat(document.getElementById('cd').value);
+      const pk = parseFloat(document.getElementById('pk').value);
+      const vk = parseFloat(document.getElementById('vk').value);
+
+      if (isNaN(t) || isNaN(roa) || isNaN(cd) || isNaN(pk) || isNaN(vk)) {
+        alert("Будь ласка, введіть коректні значення для полів.");
+        return;
+      }
+
+      const ctr = (1 - t / 100) * (roa - cd) * pk / vk;
+
+      document.getElementById('Result').innerHTML = `ЕФЛ = ${ctr.toFixed(2)}%`;
+    }
+  </script>
+
+  <footer>
+    © 2023 Всі права захищено
+  </footer>
+</body>
+
+</html>
+

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Степінь числа</title>
+<link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #bc8f8f;
+        border: solid #bc8f8f;
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      form {
+            background-color: #e6e6fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="button"] {
+            background-color: #BC8F8F;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            background-color: #BC8F8F;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        .back {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back:hover {
+    background-color: #2980b9;
+}
+a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #000;
+        }
+    </style>
+
+    
+  </head>
+  <body>  
+    <a class="back" href="../index.html">На головну</a>
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <img src="xx.png" style="width: 35px; /* Розмір картинки */
+      height: auto; /* Автоматичне збереження співвідношення сторін */
+      float: left; /* Обтікаємо текст справа */
+      margin-left: 20px;">
+        <span class="fs-4">Степінь з натуральним показником</span>
+      </a>
+    </header>
+
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5" >
+        <img src="2.png" style="width: 300px; /* Розмір картинки */
+        height: auto; /* Автоматичне збереження співвідношення сторін */
+        float: right; /* Обтікаємо текст справа */
+        margin-left: 40px;">
+        <h1 class="display-5 fw-bold">Калькулятор степенів</h1>
+        <p class="col-md-8 fs-4">Калькулятор степенів - це корисний онлайн інструмент, який допомагає обчислити число, підняте до заданої степені. Він призначений для тих, хто потребує швидко та легко знаходити результати математичних операцій степенювання без необхідності використовувати складні обчислення.</p>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch" >
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3" >
+          <h2>Калькулятор</h2>
+          <form>
+            <label for="base">Основа:</label>
+            <input type="number" id="base" name="base" step="any" required><br>
+            
+            <label for="exponent">Степінь:</label>
+            <input type="number" id="exponent" name="exponent" step="any" required><br>
+            
+            <input type="button" value="Обчислити" onclick="calculateExponent()">
+        </form>
+        
+       <p class="result">Результат: <span id="result"></span></p>
+    
+        <script>
+            function calculateExponent() {
+                var base = parseFloat(document.getElementById("base").value);
+                var exponent = parseFloat(document.getElementById("exponent").value);
+    
+                var result = Math.pow(base, exponent);
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+        </div>
+      </div>
+      <div class="col-md-6" >
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3" >
+          <h2>Як користуватися калькулятором:</h2>
+          <ol>
+            <li>Введіть основу числа в поле "Основа". Основа - це число, яке ви хочете підняти до степені.</li>
+            <li>Введіть ступінь степенювання в поле "Степінь". Це число вказує, до якого степеня потрібно підняти основу.</li>
+            <li>Натисніть кнопку "Обчислити".</li>
+            <li>Результат степенювання з'явиться нижче в полі "Результат".</li>
+        </ol>
+        <img src="1.jpg" style="width: 400px; height: auto;">
+        </div>
+      </div>
+    </div>
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3" style="margin-top: 30px;">
+      <div class="container-fluid py-5">
+        <img src="11.png" style="width: 300px; /* Розмір картинки */
+        height: auto; /* Автоматичне збереження співвідношення сторін */
+        float: right; /* Обтікаємо текст справа */
+        margin-left: 40px;">
+       <p class="col-md-8 fs-4">Калькулятор степенів може бути корисним для розв'язання різних завдань, таких як обчислення площі, об'єму, визначення відсотків та багатьох інших математичних обчислень. Він швидко допоможе вам отримати точні результати степенювання, спрощуючи ваши розрахунки.</p>
+       <p class="col-md-8 fs-4">Використовуйте цей калькулятор, щоб легко і швидко виконувати операції степенювання та розв'язувати математичні завдання, які вимагають підняття чисел до певних степенів.</p>
+      </div>
+    </div>
+    <footer class="pt-3 mt-4 text-body-secondary border-top">
+      &copy; 2023
+    </footer>
+  </div>
+</main>
+<script src="bootstrap.bundle.min.js"></script>
+    </body>
+</html>

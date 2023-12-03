@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор прямокутного трикутника</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f9f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #calculator {
+            background-color: #87CEFA;
+            color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            width: 400px;
+        }
+        header {
+            background-color: #1E90FF;
+            color: #fff;
+            padding: 20px;
+            border-radius: 16px 16px 0 0;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #00008b;
+        }
+        select, input {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 18px;
+            border: 2px solid #87CEFA;
+            border-radius: 8px;
+            outline: none;
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1E90FF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #;
+        }
+        p {
+            margin: 15px 0;
+            font-size: 18px;
+            color: #00008b;
+            text-align: left;
+        }
+        .back {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back:hover {
+    background-color: #2980b9;
+}
+a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="calculator">
+        <a class="back" href="../index.html">На головну</a>
+        <header>
+            <h1>Калькулятор прямокутного трикутника</h1>
+        </header>
+        <label for="sideSelector">Виберіть значення катетів:</label>
+        <select id="sideSelector">
+            <option value="3-4">Катети 3 і 4</option>
+            <option value="5-12">Катети 5 і 12</option>
+            <option value="7-24">Катети 7 і 24</option>
+            <option value="15-8">Катети 15 і 8</option>
+            <option value="21-20">Катети 21 і 20</option>
+        </select>
+
+        <button onclick="calculate()">Обчислити</button>
+
+        <p id="area"></p>
+        <p id="perimeter"></p>
+        <p id="angle1"></p>
+        <p id="angle2"></p>
+        <p id="hypotenuse"></p>
+        
+    </div>
+
+    <script>
+        function calculate() {
+            const sideSelector = document.getElementById('sideSelector');
+            const selectedOption = sideSelector.value.split('-');
+            const sideA = parseFloat(selectedOption[0]);
+            const sideB = parseFloat(selectedOption[1]);
+
+            const area = (sideA * sideB) / 2;
+            const perimeter = sideA + sideB + Math.sqrt(sideA**2 + sideB**2);
+            const angle1 = Math.atan(sideA / sideB) * (180 / Math.PI);
+            const angle2 = 90 - angle1;
+            const hypotenuse = Math.sqrt(sideA**2 + sideB**2);
+
+            document.getElementById('area').innerText = `Площа: ${area.toFixed(0)}`;
+            document.getElementById('perimeter').innerText = `Периметр: ${perimeter.toFixed(0)}`;
+            document.getElementById('angle1').innerText = `Кут 1: ${angle1.toFixed(2)} градусів`;
+            document.getElementById('angle2').innerText = `Кут 2: ${angle2.toFixed(2)} градусів`;
+            document.getElementById('hypotenuse').innerText = `Гіпотенуза: ${hypotenuse.toFixed(0)}`;
+        }
+    </script>
+
+</body>
+</html>

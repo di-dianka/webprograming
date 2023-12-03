@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ccffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #00cccc;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.tott, .calc, .text {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #B0C4DE;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.up {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3498db;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    transition: background-color 0.3s ease;
+}
+
+.up:hover {
+    background-color: #bdc3c7;
+}
+
+.calc input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #87ceed;
+    border-radius: 3px;
+    background-color: #f0f8ff;
+}
+
+.calc button {
+    width: 100%;
+    padding: 10px;
+    background-color: #87cefa;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #00cccc;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right{
+    background-color: rgba(0, 200, 0, 0.5);
+    border-radius: 5px;
+    padding-left:5px;
+}
+.wrong{
+    background-color: rgb(255, 44, 55);
+    border-radius: 5px;
+    padding-left:5px;
+}
+.hidden{
+    display: none;
+}
+#btn1{
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+}
+.opend{
+    background-color: skyblue;
+}
+.back {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back:hover {
+    background-color: #2980b9;
+}
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #000;
+}
